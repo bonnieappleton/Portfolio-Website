@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: black;
+  margin: 0;
+  font-family: helvetica, sans-serif;
+  font-size: 16px; }
+
+.title {
+  margin: 0;
+  color: white;
+  text-shadow: 0px 2px 2px black; }
+  .title--main {
+    font-size: 45px;
+    font-family: 'BioRhyme', serif;
+    font-weight: 100; }
+  .title--tagline {
+    margin: 10px 20px;
+    font-size: 70px;
+    font-family: 'Zilla Slab Highlight', cursive;
+    text-align: right; }
+
+.header {
+  -webkit-display: flex;
+  -webkit-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-bottom: 3px solid white; }
+  .header__nav {
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    display: flex;
+    align-items: center;
+    margin-right: -3px; }
+  .header__link {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 3px; }
+    .header__link--about {
+      background-color: #f1e651; }
+    .header__link--portfolio {
+      background-color: #7acece; }
+    .header__link--skills {
+      background-color: #f5430b; }
+
+.section {
+  -webkit-display: flex;
+  -webkit-align-items: center;
+  display: flex;
+  align-items: center; }
+  .section--top {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    background-image: url("../img/fireworks.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    border-bottom: 3px solid #f1e651; }
+
+/*# sourceMappingURL=home.css.map */
