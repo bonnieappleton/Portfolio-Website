@@ -70,6 +70,10 @@ body {
         .header__link--menu {
           display: block; } }
 
+.footer {
+  border-top: 3px solid #ffffff;
+  padding: 10px 20px; }
+
 .section {
   -webkit-display: flex;
   -webkit-align-items: center;
@@ -95,7 +99,7 @@ body {
     border-left: 3px solid #f1e651; }
   .section--portfolio {
     border-top: 3px solid #7acece;
-    border-left: 3px solid #7acece; }
+    border-right: 3px solid #7acece; }
   .section--skills {
     border-top: 3px solid #f5430b;
     border-left: 3px solid #f5430b; }
