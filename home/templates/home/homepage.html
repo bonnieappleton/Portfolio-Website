@@ -1,9 +1,54 @@
 {% extends 'home/base.html' %}
 
+{% load staticfiles %}
+
 {% block mainpage %}
 
     <section class="section section--top">
         <h2 class="title title--tagline">Web</br>Developer</h2>
+    </section>
+
+    <section class="section section--about">
+        <div class="row">
+            <h2 class="title title--section">About Me</h2>
+            <div>
+                <div class="social">
+                    <a class="social__icon social__icon--git" href="https://www.github.com/bonnieappleton"></a>
+                    <a class="social__icon social__icon--twitter" href="https://twitter.com/bonnie_appleton"></a>
+                </div>
+                bemappleton@gmail.com
+            </div>
+        </div>
+        <div class="row">
+            <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu eleifend nisl, ac volutpat mi. Sed aliquet dolor at ante aliquet congue. Mauris feugiat quam nisl, a tristique magna fermentum sit amet. Nunc eu justo pulvinar, pulvinar leo sed, luctus mi. Duis quis eleifend justo, mattis placerat dui. Suspendisse quis feugiat nunc, ut aliquam magna. Donec facilisis faucibus convallis. Aliquam ac velit vitae magna accumsan facilisis vel ut nulla. Pellentesque in lorem at lorem efficitur dapibus. Vestibulum molestie purus risus, quis vulputate massa malesuada vel. Nullam cursus libero semper molestie porta. Nullam hendrerit fermentum ligula quis semper. Quisque ultrices semper lorem vel pulvinar. Integer tincidunt vel lectus vitae condimentum. In sagittis enim sit amet ornare viverra.
+            </p>
+        </div>
+    </section>
+    
+    <section class="section section--portfolio">
+        <div class="row">
+            <h2 class="title title--section">Portfolio</h2>
+        </div>
+        <div class="row">
+            <img class="thumbnail" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu eleifend nisl, ac volutpat mi. Sed aliquet dolor at ante aliquet congue. Mauris feugiat quam nisl, a tristique magna fermentum sit amet. Nunc eu justo pulvinar, pulvinar leo sed, luctus mi. Duis quis eleifend justo, mattis placerat dui. Suspendisse quis feugiat nunc, ut aliquam magna. Donec facilisis faucibus convallis. Aliquam ac velit vitae magna accumsan facilisis vel ut nulla. Pellentesque in lorem at lorem efficitur dapibus. Vestibulum molestie purus risus, quis vulputate massa malesuada vel. Nullam cursus libero semper molestie porta. Nullam hendrerit fermentum ligula quis semper. Quisque ultrices semper lorem vel pulvinar. Integer tincidunt vel lectus vitae condimentum. In sagittis enim sit amet ornare viverra.
+            </p>
+        </div>
+    </section>
+    
+    <section class="section section--skills">
+        <div class="row">
+            <h2 class="title title--section">Skills</h2>
+        </div>
+        <div class="row">
+            <img class="thumbnail" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu eleifend nisl, ac volutpat mi. Sed aliquet dolor at ante aliquet congue. Mauris feugiat quam nisl, a tristique magna fermentum sit amet. Nunc eu justo pulvinar, pulvinar leo sed, luctus mi. Duis quis eleifend justo, mattis placerat dui. Suspendisse quis feugiat nunc, ut aliquam magna. Donec facilisis faucibus convallis. Aliquam ac velit vitae magna accumsan facilisis vel ut nulla. Pellentesque in lorem at lorem efficitur dapibus. Vestibulum molestie purus risus, quis vulputate massa malesuada vel. Nullam cursus libero semper molestie porta. Nullam hendrerit fermentum ligula quis semper. Quisque ultrices semper lorem vel pulvinar. Integer tincidunt vel lectus vitae condimentum. In sagittis enim sit amet ornare viverra.
+            </p>
+        </div>
     </section>
 
 {% endblock %}

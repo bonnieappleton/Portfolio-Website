@@ -1,49 +1,59 @@
 $color-mint: rgb(122, 206, 206);
 $color-yellow:  rgb(241, 230, 81);
 $color-red: rgb(245, 67, 11);
+$color-grey: #252525;
+$color-white: #ffffff;
+$color-black: #000000;
 
 html {
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: $color-grey;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-    background-color: black;
-    margin: 0;
+    color: $color-white;
+    background-color: $color-black;
     font-family: helvetica, sans-serif;
     font-size: 16px;
+    font-weight: 100;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .title {
     margin: 0;
-    color: white;
-    text-shadow: 0px 2px 2px black;
-    
+
     &--main {
-        font-size: 45px;
         font-family: 'BioRhyme', serif;
-        font-weight: 100;
+        font-size: 45px;
     }
-    
+
     &--tagline {
-        margin: 10px 20px;
-        font-size: 70px;
         font-family: 'Zilla Slab Highlight', cursive;
+        font-size: 70px;
         text-align: right;
+    }
+
+    &--section {
+        font-weight: 100;
     }
 }
 
 .header {
     -webkit-display: flex;
-    -webkit-justify-content: space-between;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     padding: 5px 20px;
-    border-bottom: 3px solid white;
-    
+
     &__nav {
         -webkit-display: flex;
         -webkit-align-items: center;
@@ -51,40 +61,112 @@ body {
         align-items: center;
         margin-right: -3px;
     }
-    
+
     &__link {
-        padding: 10px 15px;
-        color: black;
-        text-decoration: none;
+        color: $color-black;
         font-size: 20px;
-        font-weight: 100;
         margin: 3px;
+        padding: 10px 15px;
+        text-decoration: none;
+
         &--about {
             background-color: $color-yellow;
         }
+
         &--portfolio {
             background-color: $color-mint;
         }
+
         &--skills {
             background-color: $color-red;
         }
     }
-    
 }
 
 .section {
     -webkit-display: flex;
     -webkit-align-items: center;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-between;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+
     &--top {
-        -webkit-justify-content: flex-end;
-        justify-content: flex-end;
+        -webkit-align-items: flex-end;
+        -webkit-justify-content: center;
+        align-items: flex-end;
+        justify-content: center;
         background-image: url('../img/fireworks.png');
         background-size: cover;
         background-repeat: no-repeat;
         height: 400px;
-        border-bottom: 3px solid $color-yellow;
+        border-top: 3px solid $color-white;
+    }
 
+    &--about {
+        border-top: 3px solid $color-yellow;
+        border-left: 3px solid $color-yellow;
+    }
+
+    &--portfolio {
+        border-top: 3px solid $color-mint;
+        border-left: 3px solid $color-mint;
+    }
+
+    &--skills {
+        border-top: 3px solid $color-red;
+        border-left: 3px solid $color-red;
+    }
+}
+
+.row {
+    -webkit-display: flex;
+    -webkit-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    max-width: 900px;
+    width: 100%;
+}
+
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+
+    &--avatar {
+        border-radius: 50%;
+    }
+}
+
+.text {
+    background-color: $color-grey;
+    padding: 20px;
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+
+    &__icon {
+        display: block;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-left: 5px;
+
+        &:hover {
+            background-color: $color-grey;
+        }
+
+        &--git {
+            background-image: url('../img/white-github-64.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     }
 }
