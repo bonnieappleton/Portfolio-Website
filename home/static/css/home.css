@@ -23,10 +23,16 @@ body {
   .title--main {
     font-family: 'BioRhyme', serif;
     font-size: 45px; }
+    @media (max-width: 767px) {
+      .title--main {
+        font-size: 30px; } }
   .title--tagline {
     font-family: 'Zilla Slab Highlight', cursive;
     font-size: 70px;
     text-align: right; }
+    @media (max-width: 767px) {
+      .title--tagline {
+        font-size: 60px; } }
   .title--section {
     font-weight: 100; }
 
@@ -48,12 +54,21 @@ body {
     margin: 3px;
     padding: 10px 15px;
     text-decoration: none; }
+    @media (max-width: 767px) {
+      .header__link {
+        display: none; } }
     .header__link--about {
       background-color: #f1e651; }
     .header__link--portfolio {
       background-color: #7acece; }
     .header__link--skills {
       background-color: #f5430b; }
+    .header__link--menu {
+      background-color: #7acece;
+      display: none; }
+      @media (max-width: 767px) {
+        .header__link--menu {
+          display: block; } }
 
 .section {
   -webkit-display: flex;
@@ -93,11 +108,20 @@ body {
   margin: 10px auto;
   max-width: 900px;
   width: 100%; }
+  @media (max-width: 767px) {
+    .row {
+      -webkit-align-items: center;
+      -webkit-flex-direction: column;
+      align-items: center;
+      flex-direction: column; } }
 
 .thumbnail {
   width: 200px;
   height: 200px;
   margin-right: 20px; }
+  @media (max-width: 767px) {
+    .thumbnail {
+      margin: 20px; } }
   .thumbnail--avatar {
     border-radius: 50%; }
 

@@ -34,12 +34,20 @@ body {
     &--main {
         font-family: 'BioRhyme', serif;
         font-size: 45px;
+
+        @media(max-width: 767px) {
+            font-size: 30px;
+        }
     }
 
     &--tagline {
         font-family: 'Zilla Slab Highlight', cursive;
         font-size: 70px;
         text-align: right;
+
+        @media(max-width: 767px) {
+            font-size: 60px;
+        }
     }
 
     &--section {
@@ -69,6 +77,10 @@ body {
         padding: 10px 15px;
         text-decoration: none;
 
+        @media(max-width: 767px) {
+            display: none;
+        }
+
         &--about {
             background-color: $color-yellow;
         }
@@ -79,6 +91,14 @@ body {
 
         &--skills {
             background-color: $color-red;
+        }
+
+        &--menu {
+            background-color: $color-mint;
+            display: none;
+            @media(max-width: 767px) {
+                display: block;
+            }
         }
     }
 }
@@ -130,12 +150,23 @@ body {
     margin: 10px auto;
     max-width: 900px;
     width: 100%;
+
+    @media(max-width: 767px) {
+        -webkit-align-items: center;
+        -webkit-flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .thumbnail {
     width: 200px;
     height: 200px;
     margin-right: 20px;
+
+    @media(max-width: 767px) {
+        margin: 20px;
+    }
 
     &--avatar {
         border-radius: 50%;
