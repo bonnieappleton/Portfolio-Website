@@ -81,6 +81,10 @@ body {
             display: none;
         }
 
+        &:hover {
+            background-color: $color-white;
+        }
+
         &--about {
             background-color: $color-yellow;
         }
@@ -194,15 +198,28 @@ body {
         width: 50px;
         border-radius: 50%;
         margin-left: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: $color-mint;
+        background-position: center;
 
         &:hover {
-            background-color: $color-grey;
+            background-color: $color-white;
         }
 
         &--git {
-            background-image: url('../img/white-github-64.png');
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image: url('../img/icon-github.png');
+            background-size: 60px;
+        }
+
+        &--twitter {
+            background-image: url('../img/twitter-512.png');
+            background-size: 30px;
+        }
+
+        &--email {
+            background-image: url('../img/mail-icon.png');
+            background-size: 30px;
         }
     }
 }
