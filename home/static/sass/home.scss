@@ -1,9 +1,4 @@
-$color-mint: rgb(122, 206, 206);
-$color-yellow:  rgb(241, 230, 81);
-$color-red: rgb(245, 67, 11);
-$color-grey: #252525;
-$color-white: #ffffff;
-$color-black: #000000;
+@import 'variables';
 
 html {
     -webkit-box-sizing: border-box;
@@ -35,7 +30,7 @@ body {
         font-family: 'BioRhyme', serif;
         font-size: 45px;
 
-        @media(max-width: 767px) {
+        @media(max-width: $tablet-breakpoint) {
             font-size: 30px;
         }
     }
@@ -45,7 +40,7 @@ body {
         font-size: 70px;
         text-align: right;
 
-        @media(max-width: 767px) {
+        @media(max-width: $tablet-breakpoint) {
             font-size: 60px;
         }
     }
@@ -68,6 +63,34 @@ body {
         display: flex;
         align-items: center;
         margin-right: -3px;
+
+        &__menu {
+            display: flex;
+            position: absolute;
+            top: 62px;
+            right: 0;
+            flex-direction: column;
+            z-index: 1;
+            padding: 16px;
+            background-color: $color-black;
+
+            @media(max-width: 383px) {
+                top: 86px;
+            }
+        }
+
+        &--desktop {
+            @media(max-width: $tablet-breakpoint) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+            @media(max-width: $tablet-breakpoint) {
+                display: flex;
+            }
+        }
     }
 
     &__link {
@@ -77,10 +100,6 @@ body {
         padding: 10px 15px;
         text-decoration: none;
 
-        @media(max-width: 767px) {
-            display: none;
-        }
-
         &:hover {
             background-color: $color-white;
         }
@@ -89,20 +108,13 @@ body {
             background-color: $color-yellow;
         }
 
-        &--portfolio {
+        &--portfolio,
+        &--menu {
             background-color: $color-mint;
         }
 
         &--skills {
             background-color: $color-red;
-        }
-
-        &--menu {
-            background-color: $color-mint;
-            display: none;
-            @media(max-width: 767px) {
-                display: block;
-            }
         }
     }
 }
@@ -160,7 +172,7 @@ body {
     max-width: 900px;
     width: 100%;
 
-    @media(max-width: 767px) {
+    @media(max-width: $tablet-breakpoint) {
         -webkit-align-items: center;
         -webkit-flex-direction: column;
         align-items: center;
@@ -173,7 +185,7 @@ body {
     height: 200px;
     margin-right: 20px;
 
-    @media(max-width: 767px) {
+    @media(max-width: $tablet-breakpoint) {
         margin: 20px;
     }
 
@@ -184,8 +196,34 @@ body {
 
 .text {
     background-color: $color-grey;
-    padding: 20px;
+    padding: 0 20px;
     margin: 0;
+    flex-grow: 1;
+
+    &--bullets {
+        display: flex;
+    }
+
+    &__list {
+        flex-basis: 50%;
+
+        @media(max-width: $tablet-breakpoint) {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $color-mint;
+
+    &:hover {
+        color: $color-yellow;
+    }
+}
+
+.image-link:hover {
+    opacity: 0.8;
 }
 
 .social {
@@ -222,4 +260,8 @@ body {
             background-size: 30px;
         }
     }
+}
+
+.hidden {
+    display: none;
 }

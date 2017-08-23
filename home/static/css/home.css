@@ -48,29 +48,40 @@ body {
     display: flex;
     align-items: center;
     margin-right: -3px; }
+    .header__nav__menu {
+      display: flex;
+      position: absolute;
+      top: 62px;
+      right: 0;
+      flex-direction: column;
+      z-index: 1;
+      padding: 16px;
+      background-color: #000000; }
+      @media (max-width: 383px) {
+        .header__nav__menu {
+          top: 86px; } }
+    @media (max-width: 767px) {
+      .header__nav--desktop {
+        display: none; } }
+    .header__nav--mobile {
+      display: none; }
+      @media (max-width: 767px) {
+        .header__nav--mobile {
+          display: flex; } }
   .header__link {
     color: #000000;
     font-size: 20px;
     margin: 3px;
     padding: 10px 15px;
     text-decoration: none; }
-    @media (max-width: 767px) {
-      .header__link {
-        display: none; } }
     .header__link:hover {
       background-color: #ffffff; }
     .header__link--about {
       background-color: #f1e651; }
-    .header__link--portfolio {
+    .header__link--portfolio, .header__link--menu {
       background-color: #7acece; }
     .header__link--skills {
       background-color: #f5430b; }
-    .header__link--menu {
-      background-color: #7acece;
-      display: none; }
-      @media (max-width: 767px) {
-        .header__link--menu {
-          display: block; } }
 
 .footer {
   border-top: 3px solid #ffffff;
@@ -133,8 +144,25 @@ body {
 
 .text {
   background-color: #252525;
-  padding: 20px;
-  margin: 0; }
+  padding: 0 20px;
+  margin: 0;
+  flex-grow: 1; }
+  .text--bullets {
+    display: flex; }
+  .text__list {
+    flex-basis: 50%; }
+    @media (max-width: 767px) {
+      .text__list {
+        flex-basis: 100%; } }
+
+.link {
+  text-decoration: none;
+  color: #7acece; }
+  .link:hover {
+    color: #f1e651; }
+
+.image-link:hover {
+  opacity: 0.8; }
 
 .social {
   display: flex;
@@ -160,5 +188,8 @@ body {
     .social__icon--email {
       background-image: url("../img/mail-icon.png");
       background-size: 30px; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=home.css.map */

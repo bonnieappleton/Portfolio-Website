@@ -8,44 +8,101 @@
         <h2 class="title title--tagline">Web</br>Developer</h2>
     </section>
 
-    <section class="section section--about">
+    <section id="about" class="section section--about">
         <div class="row">
             <h2 class="title title--section">About Me</h2>
             <div class="social">
-                <a class="social__icon social__icon--git"  target="_blank" href="https://www.github.com/bonnieappleton"></a>
-                <a class="social__icon social__icon--twitter"  target="_blank" href="https://twitter.com/bonnie_appleton"></a>
+                <a class="social__icon social__icon--git" target="_blank" href="https://www.github.com/bonnieappleton"></a>
+                <a class="social__icon social__icon--twitter" target="_blank" href="https://twitter.com/bonnie_appleton"></a>
                 <a class="social__icon social__icon--email" href="mailto:bemappleton@gmail.com"></a>
             </div>
         </div>
         <div class="row">
             <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
-            <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu eleifend nisl, ac volutpat mi. Sed aliquet dolor at ante aliquet congue. Mauris feugiat quam nisl, a tristique magna fermentum sit amet. Nunc eu justo pulvinar, pulvinar leo sed, luctus mi. Duis quis eleifend justo, mattis placerat dui. Suspendisse quis feugiat nunc, ut aliquam magna. Donec facilisis faucibus convallis. Aliquam ac velit vitae magna accumsan facilisis vel ut nulla. Pellentesque in lorem at lorem efficitur dapibus. Vestibulum molestie purus risus, quis vulputate massa malesuada vel. Nullam cursus libero semper molestie porta. Nullam hendrerit fermentum ligula quis semper. Quisque ultrices semper lorem vel pulvinar. Integer tincidunt vel lectus vitae condimentum. In sagittis enim sit amet ornare viverra.
-            </p>
+            <div class="text">
+                <p>
+                    I am a freelance web developer with four years of experience in the industry.
+                    I build beautiful responsive websites for small businesses, charities and NGOs
+                    with built in content management systems so that you can have ownership over
+                    your own content.
+                </p>
+                <p>
+                    I take on remote work from anywhere in the UK and I am available
+                    for Skype calls or where possible I can meet in person. I consider projects
+                    with or without designs and where hosting and maintenance are required.
+                </p>
+                <p>
+                    I am co-organiser of codebar Oxford and Django Girls Oxford and I am passionate
+                    about promoting diversity in tech. I regularly attend local meetups such as
+                    JS Oxford and Oxford Python in order to keep up to date on current technologies
+                    and best practices.
+                </p>
+                <p>
+                    Outside of work I am a dressmaker, I read a lot of books (currently on a bit of
+                    a graphic novel binge) and I cook a mean bowl of ramen.
+                </p>
+                <p>
+                    If you have a project in mind then I would love to hear from you!
+                    You can email me at
+                    <a class="link" href="mailto:bemappleton@gmail.com">bemappleton@gmail.com</a>
+                </p>
+            </div>
         </div>
     </section>
     
-    <section class="section section--portfolio">
+    <section id="portfolio" class="section section--portfolio">
         <div class="row">
             <h2 class="title title--section">Portfolio</h2>
         </div>
         <div class="row">
-            <img class="thumbnail" src="https://placekitten.com/200/200?image=12"></img>
-            <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu eleifend nisl, ac volutpat mi. Sed aliquet dolor at ante aliquet congue. Mauris feugiat quam nisl, a tristique magna fermentum sit amet. Nunc eu justo pulvinar, pulvinar leo sed, luctus mi. Duis quis eleifend justo, mattis placerat dui. Suspendisse quis feugiat nunc, ut aliquam magna. Donec facilisis faucibus convallis. Aliquam ac velit vitae magna accumsan facilisis vel ut nulla. Pellentesque in lorem at lorem efficitur dapibus. Vestibulum molestie purus risus, quis vulputate massa malesuada vel. Nullam cursus libero semper molestie porta. Nullam hendrerit fermentum ligula quis semper. Quisque ultrices semper lorem vel pulvinar. Integer tincidunt vel lectus vitae condimentum. In sagittis enim sit amet ornare viverra.
-            </p>
+            <a class="image-link" href="https://www.photocrowd.com/" target="_blank">
+                <img class="thumbnail" src="{% static 'img/photocrowd_screenshot.png' %}" />
+            </a>
+            <div class="text">
+                <p>
+                    I spent a year at Photocrowd where I worked on the back and front end of
+                    the website and gained a wealth of experience in all aspects of the web
+                    development process from requirements gathering through to deployment.
+                </p>
+                <p>
+                    Main technologies: Python/Django, Javascript/React, HTML 5, CSS3.
+                </p>
+                <p>
+                    <a class="link" href="https://www.photocrowd.com/" target="_blank">
+                        https://www.photocrowd.com/
+                    </a>
+                </p>
+            </div>
         </div>
     </section>
     
-    <section class="section section--skills">
+    <section id="skills" class="section section--skills">
         <div class="row">
             <h2 class="title title--section">Skills</h2>
         </div>
         <div class="row">
-            <img class="thumbnail" src="https://placekitten.com/200/200?image=15"></img>
-            <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu eleifend nisl, ac volutpat mi. Sed aliquet dolor at ante aliquet congue. Mauris feugiat quam nisl, a tristique magna fermentum sit amet. Nunc eu justo pulvinar, pulvinar leo sed, luctus mi. Duis quis eleifend justo, mattis placerat dui. Suspendisse quis feugiat nunc, ut aliquam magna. Donec facilisis faucibus convallis. Aliquam ac velit vitae magna accumsan facilisis vel ut nulla. Pellentesque in lorem at lorem efficitur dapibus. Vestibulum molestie purus risus, quis vulputate massa malesuada vel. Nullam cursus libero semper molestie porta. Nullam hendrerit fermentum ligula quis semper. Quisque ultrices semper lorem vel pulvinar. Integer tincidunt vel lectus vitae condimentum. In sagittis enim sit amet ornare viverra.
-            </p>
+            <div class="text text--bullets">
+                <ul class="text__list">
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>HTML 5</li>
+                    <li>CSS 3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Relay</li>
+                    <li>ISTQB qualified web tester</li>
+                </ul>
+                <ul class="text__list">
+                    <li>Git</li>
+                    <li>Jira</li>
+                    <li>Bugzilla</li>
+                    <li>Sprintly</li>
+                    <li>Heroku</li>
+                    <li>Python Anywhere</li>
+                    <li>Selenium Webdriver</li>
+                    <li>A level French</li>
+                </ul>
+            </div>
         </div>
     </section>
     
