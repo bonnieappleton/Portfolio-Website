@@ -41,12 +41,13 @@ body {
         text-align: right;
 
         @media(max-width: $tablet-breakpoint) {
-            font-size: 60px;
+            font-size: 50px;
         }
     }
 
     &--section {
         font-weight: 100;
+        font-size: 22px;
     }
 }
 
@@ -92,30 +93,35 @@ body {
             }
         }
     }
+}
 
-    &__link {
-        color: $color-black;
-        font-size: 20px;
-        margin: 3px;
-        padding: 10px 15px;
-        text-decoration: none;
+.button {
+    color: $color-black;
+    font-size: 20px;
+    margin: 3px;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
 
-        &:hover {
-            background-color: $color-white;
-        }
+    &:hover {
+        background-color: $color-white;
+    }
 
-        &--about {
-            background-color: $color-yellow;
-        }
+    &--yellow {
+        background-color: $color-yellow;
+    }
 
-        &--portfolio,
-        &--menu {
-            background-color: $color-mint;
-        }
+    &--mint {
+        background-color: $color-mint;
+    }
 
-        &--skills {
-            background-color: $color-red;
-        }
+    &--red  {
+        background-color: $color-red;
+    }
+
+    &--contact {
+        margin: 15px 0;
+        width: 100%;
     }
 }
 
@@ -140,11 +146,15 @@ body {
         -webkit-justify-content: center;
         align-items: flex-end;
         justify-content: center;
-        background-image: url('../img/fireworks.png');
+        background-image: url('../img/fireworks.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        height: 400px;
+        height: 300px;
         border-top: 3px solid $color-white;
+
+        @media(max-width: $tablet-breakpoint) {
+            height: 200px;
+        }
     }
 
     &--about {
@@ -172,25 +182,33 @@ body {
     max-width: 900px;
     width: 100%;
 
-    @media(max-width: $tablet-breakpoint) {
-        -webkit-align-items: center;
-        -webkit-flex-direction: column;
-        align-items: center;
-        flex-direction: column;
+    &--mobile-col {
+        @media(max-width: $tablet-breakpoint) {
+            -webkit-align-items: center;
+            -webkit-flex-direction: column;
+            align-items: center;
+            flex-direction: column;
+        }
     }
 }
 
 .thumbnail {
     width: 200px;
     height: 200px;
-    margin-right: 20px;
-
-    @media(max-width: $tablet-breakpoint) {
-        margin: 20px;
-    }
 
     &--avatar {
         border-radius: 50%;
+    }
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+
+    @media(max-width: $tablet-breakpoint) {
+        margin: 0;
     }
 }
 
@@ -200,17 +218,49 @@ body {
     margin: 0;
     flex-grow: 1;
 
+    @media(max-width: $tablet-breakpoint) {
+        margin-top: 20px;
+    }
+
     &--bullets {
+        color: $color-black;
         display: flex;
+        flex-direction: column;
+        flex-basis: 33%;
+        width: 100%;
+        max-width: 300px;
+        padding-bottom: 15px;
+        margin-top: 0;
+    }
+
+    &--yellow {
+        background-color: $color-yellow;
+    }
+
+    &--mint {
+        background-color: $color-mint;
+    }
+
+    &--red {
+        background-color: $color-red;
     }
 
     &__list {
         flex-basis: 50%;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
 
         @media(max-width: $tablet-breakpoint) {
             flex-basis: 100%;
         }
     }
+}
+
+.feature-text {
+    padding: 0 20px;
+    margin: 0;
+    border: 3px solid $color-red;
 }
 
 .link {
@@ -245,13 +295,18 @@ body {
             background-color: $color-white;
         }
 
+        @media(max-width: $tablet-breakpoint) {
+            height: 40px;
+            width: 40px;
+        }
+
         &--git {
             background-image: url('../img/icon-github.png');
             background-size: 60px;
         }
 
         &--twitter {
-            background-image: url('../img/twitter-512.png');
+            background-image: url('../img/twitter-256.png');
             background-size: 30px;
         }
 

@@ -10,42 +10,50 @@
 
     <section id="about" class="section section--about">
         <div class="row">
-            <h2 class="title title--section">About Me</h2>
+            <h3 class="title title--section">About Me</h3>
             <div class="social">
                 <a class="social__icon social__icon--git" target="_blank" href="https://www.github.com/bonnieappleton"></a>
                 <a class="social__icon social__icon--twitter" target="_blank" href="https://twitter.com/bonnie_appleton"></a>
-                <a class="social__icon social__icon--email" href="mailto:bemappleton@gmail.com"></a>
             </div>
         </div>
-        <div class="row">
-            <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
+        <div class="row row--mobile-col">
+            <div class="thumbnail-container">
+                <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
+                <a class="button button--yellow button--contact" href="mailto:bemappleton@gmail.com">Contact Me</a>
+                <div class="feature-text">
+                    <p>
+                        If you would like a free consultation to discuss your project please get in touch!
+                    </p>
+                </div>
+            </div>
+            <div class="text"
             <div class="text">
                 <p>
                     I am a freelance web developer with four years of experience in the industry
                     and I build beautiful websites for small businesses, charities and NGOs.
                 </p>
+                <h4>Who am I?</h4>
                 <p>
-                    I can provide you with an easy to use content management system so that you
-                    have ownership over your own content and don't need any technical assistance
-                    for website updates. Your website will be fully responsive so that the user
-                    experience is tailored to whichever device is used to access it.
+                    I studied Chemistry at Oxford University before working at a Ingenta as a website tester for three years. Meanwhile I completed Open University courses in maths, learned web development technologies online and ran a personal Wordpress blog. I started working as a full-stack developer with photography startup Photocrowd in August 2016 and I would now like to use the wealth of knowledge I gained from this experience to give you an effective and impactful online prescence.
+                </p>
+                <p>
+                    I attend local meetups and conferences to stay up to date on the latest web standards and technologies so that my websites are ahead of the game. I am also co-organiser of codebar Oxford and Django Girls Oxford and I am a passionate advocate for diversity in tech.
                 </p>
                 <p>
-                    I attend local meetups and conferences to stay up to date on the latest web
-                    standards and technologies so that my websites are ahead of the game. I am
-                    also co-organiser of codebar Oxford and Django Girls Oxford and I am passionate
-                    about promoting diversity in tech.
+                    Outside of work I am a dressmaker, I read a lot of books (currently on a bit of a graphic novel binge) and I cook a mean bowl of ramen.
+                </p>
+                <h4>What can I do for you?</h4>
+                <p>
+                    I can provide you with an easy to use content management system so that you have ownership over your own content and don't need any technical assistance for website updates - I can give you training so that you are familiar with the editing interface
+	            </p>
+                <p>
+                    Your website will be fully responsive with a tailored user experience to each screen size.
                 </p>
                 <p>
-                    Outside of work I am a dressmaker, I read a lot of books (currently on a bit
-                    of a graphic novel binge) and I cook a mean bowl of ramen.
+                    I can set up domain name and hosting if required
                 </p>
                 <p>
-                    If would like a free consultation so that I can learn more about your project
-                    please get in touch!
-
-                    You can email me at
-                    <a class="link" href="mailto:bemappleton@gmail.com">bemappleton@gmail.com</a>
+                    I can give advice on good SEO practices and show you how to use Google Analytics and Webmaster Tools to improve your search rankings.
                 </p>
             </div>
         </div>
@@ -53,12 +61,14 @@
     
     <section id="portfolio" class="section section--portfolio">
         <div class="row">
-            <h2 class="title title--section">Portfolio</h2>
+            <h3 class="title title--section">Portfolio</h3>
         </div>
-        <div class="row">
-            <a class="image-link" href="https://www.photocrowd.com/" target="_blank">
-                <img class="thumbnail" src="{% static 'img/photocrowd_screenshot.png' %}" />
-            </a>
+        <div class="row row--mobile-col">
+            <div class="thumbnail-container">
+                <a class="image-link" href="https://www.photocrowd.com/" target="_blank">
+                    <img class="thumbnail" src="{% static 'img/photocrowd_screenshot.jpg' %}" />
+                </a>
+            </div>
             <div class="text">
                 <p>
                     I spent a year at Photocrowd where I worked on the back and front end of
@@ -82,22 +92,30 @@
     
     <section id="skills" class="section section--skills">
         <div class="row">
-            <h2 class="title title--section">Skills</h2>
+            <h3 class="title title--section">Skills</h3>
         </div>
-        <div class="row">
-            <div class="text text--bullets">
+        <div class="row row--mobile-col">
+            <div class="text text--bullets text--yellow">
+                <h4>Technologies</h4>
                 <ul class="text__list">
                     <li>Python</li>
                     <li>Django</li>
                     <li>HTML 5</li>
                     <li>CSS 3</li>
+                    <li>Less</li>
+                    <li>Sass</li>
                     <li>JavaScript</li>
                     <li>React</li>
                     <li>Relay</li>
-                    <li>ISTQB qualified web tester</li>
-                    <li>Google Analytics</li>
+                    <li>Wordpress</li>
                 </ul>
+            </div>
+            <div class="text text--bullets text--mint">
+                <h4>Tools</h4>
                 <ul class="text__list">
+                    <li>Google Analytics</li>
+                    <li>Google Webmasters</li>
+                    <li>SEO</li>
                     <li>Git</li>
                     <li>Jira</li>
                     <li>Bugzilla</li>
@@ -105,6 +123,15 @@
                     <li>Heroku</li>
                     <li>Python Anywhere</li>
                     <li>Selenium Webdriver</li>
+                </ul>
+            </div>
+            <div class="text text--bullets text--red">
+                <h4>Qualifications</h4>
+                <ul class="text__list">
+                    <li>ISTQB qualified web tester</li>
+                    <li>Masters in Chemistry, Oxford University</li>
+                    <li>Number Theory, Logic and Computability, Open University</li>
+                    <li>Group Theory and Symmetry, Open University</li>
                     <li>A level French</li>
                 </ul>
             </div>
