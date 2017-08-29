@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+
+{% load staticfiles %}
+
+{% block page_title %}Contact{% endblock %}
+
+{% block mainpage %}
+<section class="section section--narrow">
+    <div class="row">
+        <h2 class="title title--section">Get in touch</h2>
+        <div class="social">
+            <a class="social__icon social__icon--git" target="_blank" href="https://www.github.com/bonnieappleton"></a>
+            <a class="social__icon social__icon--twitter" target="_blank" href="https://twitter.com/bonnie_appleton"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text">
+            <p>
+                Please tell me about your project. What is the scope?
+                Why are you doing it? What can I do to help you?
+                A rough idea of your budget and timescale would also be helpful.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <form role="form" action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

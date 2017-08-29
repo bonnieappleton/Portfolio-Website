@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Bonnie Appleton Portfolio</title>
+        <title>Bonnie Appleton | {% block page_title %}Home{% endblock %}</title>
 
         <!--Fonts-->
         <link href='https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight|BioRhyme:200' rel='stylesheet' type='text/css'>
@@ -22,7 +22,9 @@
         
         {% block header %}
         <header class="header">
-            <h1 class="title title--main">Bonnie Appleton</h1>
+            <a class="link" href="{% url 'home' %}">
+                <h1 class="title title--main">Bonnie Appleton</h1>
+            </a>
             <nav class="header__nav header__nav--desktop">
                 <a class="button button--yellow" href="#about">About</a>
                 <a class="button button--mint" href="#portfolio">Portfolio</a>
@@ -40,6 +42,10 @@
         {% endblock %}
         
         {% block mainpage %}{% endblock %}
+        
+        <footer class="footer">
+            <p>Website by Bonnie Appleton</p>
+        </footer>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         

@@ -29,6 +29,12 @@ body {
     &--main {
         font-family: 'BioRhyme', serif;
         font-size: 45px;
+        color: $color-white;
+
+        &:hover {
+            color: $color-black;
+            background-color: $color-white;
+        }
 
         @media(max-width: $tablet-breakpoint) {
             font-size: 30px;
@@ -47,7 +53,7 @@ body {
 
     &--section {
         font-weight: 100;
-        font-size: 22px;
+        font-size: 30px;
     }
 }
 
@@ -56,7 +62,8 @@ body {
     display: flex;
     -webkit-justify-content: space-between;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 0 20px;
+    border-bottom: 3px solid $color-white;
 
     &__nav {
         -webkit-display: flex;
@@ -122,11 +129,12 @@ body {
     &--contact {
         margin: 15px 0;
         width: 100%;
+        max-width: 200px;
     }
 }
 
 .footer {
-    border-top: 3px solid $color-white;
+    border-top: 3px solid $color-red;
     padding: 10px 20px;
 }
 
@@ -141,6 +149,11 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
 
+    &--narrow {
+        max-width: 500px;
+        margin: auto;
+    }
+
     &--top {
         -webkit-align-items: flex-end;
         -webkit-justify-content: center;
@@ -150,26 +163,14 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         height: 300px;
-        border-top: 3px solid $color-white;
 
         @media(max-width: $tablet-breakpoint) {
             height: 200px;
         }
     }
 
-    &--about {
-        border-top: 3px solid $color-yellow;
-        border-left: 3px solid $color-yellow;
-    }
-
-    &--portfolio {
-        border-top: 3px solid $color-mint;
-        border-right: 3px solid $color-mint;
-    }
-
-    &--skills {
+    &--border-top {
         border-top: 3px solid $color-red;
-        border-left: 3px solid $color-red;
     }
 }
 
@@ -202,65 +203,72 @@ body {
 }
 
 .thumbnail-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
+    margin-right: 30px;
 
     @media(max-width: $tablet-breakpoint) {
         margin: 0;
     }
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .text {
     background-color: $color-grey;
     padding: 0 20px;
     margin: 0;
-    flex-grow: 1;
+    flex-grow: 0;
 
     @media(max-width: $tablet-breakpoint) {
         margin-top: 20px;
     }
 
-    &--bullets {
-        color: $color-black;
-        display: flex;
-        flex-direction: column;
-        flex-basis: 33%;
-        width: 100%;
-        max-width: 300px;
-        padding-bottom: 15px;
-        margin-top: 0;
+    &--grow {
+        flex-grow: 1;
+    }
+}
+
+.expanding-title {
+    width: 100%;
+    padding: 0 15px;
+    margin: 15px 0 0;
+    background-color: $color-mint;
+    color: $color-black;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+        background-color: $color-white;
     }
 
     &--yellow {
         background-color: $color-yellow;
     }
 
-    &--mint {
-        background-color: $color-mint;
-    }
-
     &--red {
         background-color: $color-red;
     }
-
-    &__list {
-        flex-basis: 50%;
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-
-        @media(max-width: $tablet-breakpoint) {
-            flex-basis: 100%;
-        }
-    }
 }
 
-.feature-text {
-    padding: 0 20px;
-    margin: 0;
-    border: 3px solid $color-red;
+.skills-block {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 0;
+
+    &__list {
+        list-style: none;
+        padding: 15px 0;
+        margin: 0;
+        flex-grow: 1;
+    }
 }
 
 .link {
@@ -268,12 +276,20 @@ body {
     color: $color-mint;
 
     &:hover {
-        color: $color-yellow;
+        color: $color-white;
     }
 }
 
 .image-link:hover {
     opacity: 0.8;
+}
+
+.close {
+    background-image: url('../img/plus-icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
 }
 
 .social {
@@ -319,4 +335,10 @@ body {
 
 .hidden {
     display: none;
+}
+
+.hidden-mobile {
+    @media(max-width: $tablet-breakpoint) {
+        display: none;
+    }
 }

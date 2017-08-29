@@ -2,13 +2,15 @@
 
 {% load staticfiles %}
 
+{% block page_title %}Home{% endblock %}
+
 {% block mainpage %}
 
     <section class="section section--top">
         <h2 class="title title--tagline">Web</br>Developer</h2>
     </section>
 
-    <section id="about" class="section section--about">
+    <section id="about" class="section section--border-top">
         <div class="row">
             <h3 class="title title--section">About Me</h3>
             <div class="social">
@@ -17,49 +19,78 @@
             </div>
         </div>
         <div class="row row--mobile-col">
-            <div class="thumbnail-container">
+            <div class="column-container thumbnail-container">
                 <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
-                <a class="button button--yellow button--contact" href="mailto:bemappleton@gmail.com">Contact Me</a>
-                <div class="feature-text">
+                <a class="button button--mint button--contact" href="{% url 'contact' %}">Contact Me</a>
+                <div class="text hidden-mobile">
                     <p>
                         If you would like a free consultation to discuss your project please get in touch!
                     </p>
                 </div>
             </div>
-            <div class="text"
-            <div class="text">
-                <p>
-                    I am a freelance web developer with four years of experience in the industry
-                    and I build beautiful websites for small businesses, charities and NGOs.
-                </p>
-                <h4>Who am I?</h4>
-                <p>
-                    I studied Chemistry at Oxford University before working at a Ingenta as a website tester for three years. Meanwhile I completed Open University courses in maths, learned web development technologies online and ran a personal Wordpress blog. I started working as a full-stack developer with photography startup Photocrowd in August 2016 and I would now like to use the wealth of knowledge I gained from this experience to give you an effective and impactful online prescence.
-                </p>
-                <p>
-                    I attend local meetups and conferences to stay up to date on the latest web standards and technologies so that my websites are ahead of the game. I am also co-organiser of codebar Oxford and Django Girls Oxford and I am a passionate advocate for diversity in tech.
-                </p>
-                <p>
-                    Outside of work I am a dressmaker, I read a lot of books (currently on a bit of a graphic novel binge) and I cook a mean bowl of ramen.
-                </p>
-                <h4>What can I do for you?</h4>
-                <p>
-                    I can provide you with an easy to use content management system so that you have ownership over your own content and don't need any technical assistance for website updates - I can give you training so that you are familiar with the editing interface
-	            </p>
-                <p>
-                    Your website will be fully responsive with a tailored user experience to each screen size.
-                </p>
-                <p>
-                    I can set up domain name and hosting if required
-                </p>
-                <p>
-                    I can give advice on good SEO practices and show you how to use Google Analytics and Webmaster Tools to improve your search rankings.
-                </p>
+            <div class="column-container">
+                <div class="text">
+                    <p>
+                        I am a freelance web developer with four years of experience in the industry
+                        and I build beautiful websites for small businesses, charities and NGOs.
+                    </p>
+                </div>
+                <a class="expanding-title" href="#">
+                    <h4>Who am I?</h4>
+                    <div class="close" href="#"></div>
+                </a>
+                <div class="text hidden-mobile">
+                    <p>
+                        I studied Chemistry at Oxford University before working at Ingenta
+                        as a website tester for three years. Meanwhile I completed Open
+                        University courses in maths, learned web development technologies
+                        online and ran a personal Wordpress blog. I started working as a
+                        full-stack developer with photography startup Photocrowd in August
+                        2016 and I would now like to use the wealth of knowledge I gained
+                        from this experience to give you an effective and impactful online
+                        prescence.
+                    </p>
+                    <p>
+                        I attend local meetups and conferences to stay up to date on the
+                        latest web standards and technologies so that my websites are ahead
+                        of the game. I am also co-organiser of codebar Oxford and Django Girls
+                        Oxford and I am a passionate advocate for diversity in tech.
+                    </p>
+                    <p>
+                        Outside of work I am a dressmaker, I read a lot of books (currently
+                        on a bit of a graphic novel binge) and I cook a mean bowl of ramen.
+                    </p>
+                </div>
+                <a class="expanding-title" href="#">
+                    <h4>What can I do for you?</h4>
+                    <div class="close" href="#"></div>
+                </a>
+                <div class="text hidden-mobile">
+                    <p>
+                        I can provide you with an easy to use content management
+                        system so that you have ownership over your own content and
+                        don't need any technical assistance for website updates -
+                        I can give you training so that you are familiar with the
+                        editing interface
+    	            </p>
+                    <p>
+                        Your website will be fully responsive with a tailored
+                        user experience to each screen size.
+                    </p>
+                    <p>
+                        I can set up domain name and hosting if required
+                    </p>
+                    <p>
+                        I can give advice on good SEO practices and show you how
+                        to use Google Analytics and Webmaster Tools to improve your
+                        search rankings.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    
-    <section id="portfolio" class="section section--portfolio">
+
+    <section id="portfolio" class="section section--border-top">
         <div class="row">
             <h3 class="title title--section">Portfolio</h3>
         </div>
@@ -70,6 +101,7 @@
                 </a>
             </div>
             <div class="text">
+                <h4>Photocrowd</h4>
                 <p>
                     I spent a year at Photocrowd where I worked on the back and front end of
                     the website and gained a wealth of experience in all aspects of the web
@@ -90,56 +122,66 @@
         </div>
     </section>
     
-    <section id="skills" class="section section--skills">
+    <section id="skills" class="section section--border-top">
         <div class="row">
             <h3 class="title title--section">Skills</h3>
         </div>
         <div class="row row--mobile-col">
-            <div class="text text--bullets text--yellow">
-                <h4>Technologies</h4>
-                <ul class="text__list">
-                    <li>Python</li>
-                    <li>Django</li>
-                    <li>HTML 5</li>
-                    <li>CSS 3</li>
-                    <li>Less</li>
-                    <li>Sass</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Relay</li>
-                    <li>Wordpress</li>
-                </ul>
+            <div class="skills-block">
+                <a class="expanding-title expanding-title--yellow" href="#">
+                    <h4>Technologies</h4>
+                    <div class="close" href="#"></div>
+                </a>
+                <div class="text text--grow">
+                    <ul class="skills-block__list">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>HTML 5</li>
+                        <li>CSS 3</li>
+                        <li>Less</li>
+                        <li>Sass</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Relay</li>
+                        <li>Wordpress</li>
+                    </ul>
+                </div>
             </div>
-            <div class="text text--bullets text--mint">
-                <h4>Tools</h4>
-                <ul class="text__list">
-                    <li>Google Analytics</li>
-                    <li>Google Webmasters</li>
-                    <li>SEO</li>
-                    <li>Git</li>
-                    <li>Jira</li>
-                    <li>Bugzilla</li>
-                    <li>Sprintly</li>
-                    <li>Heroku</li>
-                    <li>Python Anywhere</li>
-                    <li>Selenium Webdriver</li>
-                </ul>
+            <div class="skills-block">
+                <a class="expanding-title" href="#">
+                    <h4>Tools</h4>
+                    <div class="close" href="#"></div>
+                </a>
+                <div class="text text--grow">
+                    <ul class="skills-block__list">
+                        <li>Google Analytics</li>
+                        <li>Google Webmasters</li>
+                        <li>SEO</li>
+                        <li>Git</li>
+                        <li>Jira</li>
+                        <li>Bugzilla</li>
+                        <li>Sprintly</li>
+                        <li>Heroku</li>
+                        <li>Python Anywhere</li>
+                        <li>Selenium Webdriver</li>
+                    </ul>
+                </div>
             </div>
-            <div class="text text--bullets text--red">
-                <h4>Qualifications</h4>
-                <ul class="text__list">
-                    <li>ISTQB qualified web tester</li>
-                    <li>Masters in Chemistry, Oxford University</li>
-                    <li>Number Theory, Logic and Computability, Open University</li>
-                    <li>Group Theory and Symmetry, Open University</li>
-                    <li>A level French</li>
-                </ul>
+            <div class="skills-block">
+                <a class="expanding-title expanding-title--red" href="#">
+                    <h4>Qualifications</h4>
+                    <div class="close" href="#"></div>
+                </a>
+                <div class="text text--grow">
+                    <ul class="skills-block__list">
+                        <li>ISTQB qualified web tester</li>
+                        <li>Masters in Chemistry, Oxford University</li>
+                        <li>Number Theory, Logic and Computability, Open University</li>
+                        <li>Group Theory and Symmetry, Open University</li>
+                        <li>A level French</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    
-    <footer class="footer">
-        <p>Website by Bonnie Appleton</p>
-    </footer>
-
 {% endblock %}
