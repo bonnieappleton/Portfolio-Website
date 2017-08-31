@@ -19,3 +19,9 @@ class Contact(FormView):
 
 class ContactSuccess(TemplateView):
     template_name = 'home/contact-success.html'
+
+class JSProjects(TemplateView):
+    template_name = 'js-projects/main.html'
+
+class JSBooks(TemplateView):
+    template_name = 'js-projects/books.html'

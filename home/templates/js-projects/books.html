@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+
+{% block mainpage %}
+
+<section id="about" class="section">
+    <form class="books-form">
+      <input type="text" class="books-form__search" placeholder="Book or Author">
+      <ul class="books-form__suggestions">
+        <li class="books-form__suggestion">Filter for a book</li>
+        <li class="books-form__suggestion">or an author</li>
+      </ul>
+    </form>
+</section>
+    
+{% endblock %}
+
+{% block extrajs %}
+    <script>
+        const endpoint = 'https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json';
+        const books = [];
+        const searchInput = document.querySelector('.books-form__search');
+        const suggestions = document.querySelector('.books-form__suggestions');
+
+        fetch(endpoint).then(
+            blob => blob.json().then(
+                data => books.push(...data)
+            )
+        );
+        
+        function findMatches(wordToMatch, books){
+            return books.filter(book => {
+                const regex = new RegExp(wordToMatch, 'gi');
+                return book.title.match(regex) || book.author.match(regex);
+            });
+        };
+        
+        function displayMatches(){
+            const matchArray = findMatches(this.value, books);
+            const display = matchArray.map(book => {
+                return `
+                    <li class="books-form__suggestion">
+                        <span class="books-form__title">${book.title}</span>
+                        <span class="books-form__author">${book.author}</span>
+                    </li>
+                `;
+            }).join('');
+            suggestions.innerHTML = display;
+        };
+        
+        searchInput.addEventListener('change', displayMatches);
+        searchInput.addEventListener('keyup', displayMatches);
+
+    </script>
+{% endblock %}

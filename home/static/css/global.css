@@ -252,4 +252,38 @@ body {
   .hidden-mobile {
     display: none; } }
 
-/*# sourceMappingURL=home.css.map */
+.books-form {
+  width: 100%;
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto; }
+  .books-form__search {
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    outline: 0;
+    border: 3px solid #7acece;
+    background-color: #252525;
+    width: 120%;
+    left: -10%;
+    position: relative;
+    top: 10px;
+    z-index: 2;
+    font-size: 40px; }
+  .books-form__suggestions {
+    margin: 12px 0;
+    padding: 0;
+    position: relative; }
+  .books-form__suggestion {
+    color: #ffffff;
+    background: #252525;
+    list-style: none;
+    border-bottom: 3px solid #000000;
+    margin: 0;
+    padding: 20px;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize; }
+
+/*# sourceMappingURL=global.css.map */
