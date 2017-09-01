@@ -30,6 +30,7 @@ body {
         font-family: 'BioRhyme', serif;
         font-size: 45px;
         color: $color-white;
+        height: 100%;
 
         &:hover {
             color: $color-black;
@@ -54,6 +55,10 @@ body {
     &--section {
         font-weight: 100;
         font-size: 30px;
+
+        @media(max-width: $tablet-breakpoint) {
+            font-size: 24px;
+        }
     }
 }
 
@@ -74,16 +79,17 @@ body {
 
         &__menu {
             display: flex;
+            justify-content: space-between;
             position: absolute;
-            top: 62px;
+            top: 76px;
             right: 0;
-            flex-direction: column;
             z-index: 1;
-            padding: 16px;
+            padding: 0 16px;
             background-color: $color-black;
 
             @media(max-width: 383px) {
-                top: 86px;
+                top: 97px;
+                width: 100%;
             }
         }
 
@@ -105,13 +111,18 @@ body {
 .button {
     color: $color-black;
     font-size: 20px;
-    margin: 3px;
+    margin: 15px 3px;
     padding: 10px 15px;
     text-decoration: none;
     text-align: center;
 
+    @media(max-width: $tablet-breakpoint) {
+        font-size: 16px;
+    }
+
     &:hover {
         background-color: $color-white;
+        cursor: pointer;
     }
 
     &--yellow {
@@ -126,16 +137,16 @@ body {
         background-color: $color-red;
     }
 
-    &--contact {
-        margin: 15px 0;
+    &--full {
         width: 100%;
-        max-width: 200px;
+        margin: 15px 0;
     }
 }
 
 .footer {
-    border-top: 3px solid $color-red;
+    border-top: 3px solid $color-white;
     padding: 10px 20px;
+    font-size: 12px;
 }
 
 .section {
@@ -183,6 +194,10 @@ body {
     max-width: 900px;
     width: 100%;
 
+    &--title {
+        align-items: center;
+    }
+
     &--mobile-col {
         @media(max-width: $tablet-breakpoint) {
             -webkit-align-items: center;
@@ -204,9 +219,10 @@ body {
 
 .thumbnail-container {
     margin-right: 30px;
+    max-width: 200px;
 
     @media(max-width: $tablet-breakpoint) {
-        margin: 0;
+        margin: 0 0 15px;
     }
 }
 
@@ -222,16 +238,12 @@ body {
     margin: 0;
     flex-grow: 0;
 
-    @media(max-width: $tablet-breakpoint) {
-        margin-top: 20px;
-    }
-
     &--grow {
         flex-grow: 1;
     }
 }
 
-.expanding-title {
+.accordion {
     width: 100%;
     padding: 0 15px;
     margin: 15px 0 0;
@@ -244,6 +256,20 @@ body {
 
     &:hover {
         background-color: $color-white;
+    }
+
+    &__title {
+        font-weight: normal;
+    }
+
+    &__close {
+        background-image: url('../img/plus-icon.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        transform: rotate(45deg);
+        transition-duration: 0.3s;
     }
 
     &--yellow {
@@ -282,14 +308,6 @@ body {
 
 .image-link:hover {
     opacity: 0.8;
-}
-
-.close {
-    background-image: url('../img/plus-icon.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30px;
-    width: 30px;
 }
 
 .social {

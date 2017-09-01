@@ -3,16 +3,16 @@ from django import forms
 class ContactForm(forms.Form):
     name = forms.CharField(
         required=True,
-        label='Name',
+        label='Name*',
     )
     contact_email = forms.EmailField(
         required=True,
-        label='Email',
+        label='Email*',
     )
     email_content = forms.CharField(
         required=True,
         widget=forms.Textarea,
-        label='Your message',
+        label='Your message*',
     )
 
     def send_email(self):

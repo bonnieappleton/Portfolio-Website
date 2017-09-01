@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Bonnie Appleton | {% block page_title %}Home{% endblock %}</title>
+        <title>Bonnie Appleton | {% block page_title %}Web Developer{% endblock %}</title>
 
         <!--Fonts-->
         <link href='https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight|BioRhyme:200' rel='stylesheet' type='text/css'>
@@ -44,7 +44,7 @@
         {% block mainpage %}{% endblock %}
         
         <footer class="footer">
-            <p>Website by Bonnie Appleton</p>
+            <p>Website designed and built by Bonnie Appleton using the Django web framework</p>
         </footer>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -56,6 +56,26 @@
             $('#menu-button').click(function(){
                 $('#menu').toggleClass('hidden');
             });
+            
+            $('.accordion').click(function(e) {
+                // Grab current anchor value
+                var currentAttrValue = $(this).attr('data-accordion');
+         
+                if($(e.target).is('.active')) {
+                    $(this).removeClass('active');
+                    $(`#${currentAttrValue}`).slideUp(300).removeClass('open');
+                    $(this).children('.accordion__close').css({'transform': 'rotate(0deg)'}, 300);
+                } else {
+                    // Add active class to section title
+                    $(this).addClass('active');
+                    // Open up the hidden content panel
+                    $(`#${currentAttrValue}`).slideDown(300).addClass('open');
+                    $(this).children('.accordion__close').css({'transform': 'rotate(45deg)'}, 300);
+                }
+                
+                e.preventDefault();
+            });
+            
         
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -6,7 +6,7 @@
 
 {% block mainpage %}
 <section class="section section--narrow">
-    <div class="row">
+    <div class="row row--title">
         <h2 class="title title--section">Get in touch</h2>
         <div class="social">
             <a class="social__icon social__icon--git" target="_blank" href="https://www.github.com/bonnieappleton"></a>
@@ -23,10 +23,10 @@
         </div>
     </div>
     <div class="row">
-        <form role="form" action="" method="post">
+        <form class="contact-form" role="form" action="" method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
+            {{ form }}
+            <button class="button button--yellow button--full" type="submit">Submit</button>
         </form>
     </div>
 </section>

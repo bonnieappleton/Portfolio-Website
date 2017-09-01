@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.shortcuts import render
 from django.views.generic import FormView, TemplateView
 
@@ -12,9 +13,12 @@ class Contact(FormView):
     success_url = 'success'
 
     def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        form.send_email()
+        subject = 'Website inquiry - ' + form.cleaned_data['name']
+        message = form.cleaned_data['email_content']
+        sender = form.cleaned_data['contact_email']
+        recipients = ['bemappleton@gmail.com']
+
+        send_mail(subject, message, sender, recipients)
         return super(Contact, self).form_valid(form)
 
 class ContactSuccess(TemplateView):

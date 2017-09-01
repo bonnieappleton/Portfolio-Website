@@ -11,7 +11,7 @@
     </section>
 
     <section id="about" class="section section--border-top">
-        <div class="row">
+        <div class="row row--title">
             <h3 class="title title--section">About Me</h3>
             <div class="social">
                 <a class="social__icon social__icon--git" target="_blank" href="https://www.github.com/bonnieappleton"></a>
@@ -21,7 +21,7 @@
         <div class="row row--mobile-col">
             <div class="column-container thumbnail-container">
                 <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
-                <a class="button button--mint button--contact" href="{% url 'contact' %}">Contact Me</a>
+                <a class="button button--yellow button--full" href="{% url 'contact' %}">Contact Me</a>
                 <div class="text hidden-mobile">
                     <p>
                         If you would like a free consultation to discuss your project please get in touch!
@@ -35,11 +35,36 @@
                         and I build beautiful websites for small businesses, charities and NGOs.
                     </p>
                 </div>
-                <a class="expanding-title" href="#">
-                    <h4>Who am I?</h4>
-                    <div class="close" href="#"></div>
+                <a class="accordion active" href="#" data-accordion="accordion-what-can-i-do">
+                    <h4 class="accordion__title">What can I do for you?</h4>
+                    <div class="accordion__close" href="#"></div>
                 </a>
-                <div class="text hidden-mobile">
+                <div id="accordion-what-can-i-do" class="text">
+                    <p>
+                        I can provide you with an easy to use content management
+                        system so that you have ownership over your own content and
+                        don't need any technical assistance for website updates -
+                        I can give you training so that you are familiar with the
+                        editing interface.
+    	            </p>
+                    <p>
+                        Your website will be fully responsive with a tailored
+                        user experience to each screen size.
+                    </p>
+                    <p>
+                        I can set up domain name and hosting if required.
+                    </p>
+                    <p>
+                        I can give advice on good SEO practices and show you how
+                        to use Google Analytics and Webmaster Tools to improve your
+                        search rankings.
+                    </p>
+                </div>
+                <a class="accordion active" href="#" data-accordion="accordion-who-am-i">
+                    <h4 class="accordion__title">Who am I?</h4>
+                    <div class="accordion__close" href="#"></div>
+                </a>
+                <div id="accordion-who-am-i" class="text">
                     <p>
                         I studied Chemistry at Oxford University before working at Ingenta
                         as a website tester for three years. Meanwhile I completed Open
@@ -61,37 +86,12 @@
                         on a bit of a graphic novel binge) and I cook a mean bowl of ramen.
                     </p>
                 </div>
-                <a class="expanding-title" href="#">
-                    <h4>What can I do for you?</h4>
-                    <div class="close" href="#"></div>
-                </a>
-                <div class="text hidden-mobile">
-                    <p>
-                        I can provide you with an easy to use content management
-                        system so that you have ownership over your own content and
-                        don't need any technical assistance for website updates -
-                        I can give you training so that you are familiar with the
-                        editing interface.
-    	            </p>
-                    <p>
-                        Your website will be fully responsive with a tailored
-                        user experience to each screen size.
-                    </p>
-                    <p>
-                        I can set up domain name and hosting if required.
-                    </p>
-                    <p>
-                        I can give advice on good SEO practices and show you how
-                        to use Google Analytics and Webmaster Tools to improve your
-                        search rankings.
-                    </p>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="portfolio" class="section section--border-top">
-        <div class="row">
+        <div class="row row--title">
             <h3 class="title title--section">Portfolio</h3>
         </div>
         <div class="row row--mobile-col">
@@ -123,16 +123,16 @@
     </section>
     
     <section id="skills" class="section section--border-top">
-        <div class="row">
+        <div class="row row--title">
             <h3 class="title title--section">Skills</h3>
         </div>
         <div class="row row--mobile-col">
             <div class="skills-block">
-                <a class="expanding-title expanding-title--yellow" href="#">
-                    <h4>Technologies</h4>
-                    <div class="close" href="#"></div>
+                <a class="accordion accordion--yellow active" href="#" data-accordion="accordion-tech">
+                    <h4 class="accordion__title">Technologies</h4>
+                    <div class="accordion__close"></div>
                 </a>
-                <div class="text text--grow">
+                <div id="accordion-tech" class="text">
                     <ul class="skills-block__list">
                         <li>Python</li>
                         <li>Django</li>
@@ -148,11 +148,11 @@
                 </div>
             </div>
             <div class="skills-block">
-                <a class="expanding-title" href="#">
-                    <h4>Tools</h4>
-                    <div class="close" href="#"></div>
+                <a class="accordion active" href="#" data-accordion="accordion-tools">
+                    <h4 class="accordion__title">Tools</h4>
+                    <div class="accordion__close"></div>
                 </a>
-                <div class="text text--grow">
+                <div id="accordion-tools" class="text">
                     <ul class="skills-block__list">
                         <li>Google Analytics</li>
                         <li>Google Webmasters</li>
@@ -168,17 +168,17 @@
                 </div>
             </div>
             <div class="skills-block">
-                <a class="expanding-title expanding-title--red" href="#">
-                    <h4>Qualifications</h4>
-                    <div class="close" href="#"></div>
+                <a class="accordion accordion--red active" href="#" data-accordion="accordion-qualifications">
+                    <h4 class="accordion__title">Qualifications</h4>
+                    <div class="accordion__close" href="#"></div>
                 </a>
-                <div class="text text--grow">
+                <div id="accordion-qualifications" class="text">
                     <ul class="skills-block__list">
                         <li>ISTQB qualified web tester</li>
                         <li>Masters in Chemistry, Oxford University</li>
                         <li>Number Theory, Logic and Computability, Open University</li>
                         <li>Group Theory and Symmetry, Open University</li>
-                        <li>A level French</li>
+                        <li>Conversational French</li>
                     </ul>
                 </div>
             </div>
