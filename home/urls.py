@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^contact/success/$', views.ContactSuccess.as_view(), name='contact-success'),
     url(r'^js-projects/$', views.JSProjects.as_view(), name='js-projects'),
     url(r'^js-projects/books$', views.JSBooks.as_view(), name='js-books'),
+    url(r'^js-projects/rainbow-canvas$', views.JSRainbowCanvas.as_view(), name='js-rainbow-canvas'),
 ]

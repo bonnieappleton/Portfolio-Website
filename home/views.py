@@ -29,3 +29,6 @@ class JSProjects(TemplateView):
 
 class JSBooks(TemplateView):
     template_name = 'js-projects/books.html'
+    
+class JSRainbowCanvas(TemplateView):
+    template_name = 'js-projects/rainbow-canvas.html'
