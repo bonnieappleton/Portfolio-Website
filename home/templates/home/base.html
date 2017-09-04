@@ -26,16 +26,16 @@
                 <h1 class="title title--main">Bonnie Appleton</h1>
             </a>
             <nav class="header__nav header__nav--desktop">
-                <a class="button button--yellow" href="#about">About</a>
-                <a class="button button--mint" href="#portfolio">Portfolio</a>
-                <a class="button button--red" href="#skills">Skills</a>
+                <a class="button button--yellow" href="{% url 'home' %}#about">About</a>
+                <a class="button button--mint" href="{% url 'home' %}#portfolio">Portfolio</a>
+                <a class="button button--red" href="{% url 'home' %}#skills">Skills</a>
             </nav>
             <nav class="header__nav header__nav--mobile">
                 <a id="menu-button" class="button button--mint" href="#">Menu</a>
                 <div id="menu" class="header__nav__menu hidden">
-                    <a class="button button--yellow" href="#about">About</a>
-                    <a class="button button--mint" href="#portfolio">Portfolio</a>
-                    <a class="button button--red" href="#skills">Skills</a>
+                    <a class="button button--yellow" href="{% url 'home' %}#about">About</a>
+                    <a class="button button--mint" href="{% url 'home' %}#portfolio">Portfolio</a>
+                    <a class="button button--red" href="{% url 'home' %}#skills">Skills</a>
                 </div>
             </nav>
         </header>

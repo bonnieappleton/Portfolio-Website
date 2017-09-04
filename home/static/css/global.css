@@ -206,6 +206,9 @@ body {
   .accordion--red {
     background-color: #f5430b; }
 
+.bullets {
+  padding-left: 16px; }
+
 .skills-block {
   display: flex;
   flex-direction: column;
