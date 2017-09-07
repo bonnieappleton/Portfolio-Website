@@ -7,3 +7,7 @@ db.sqlite3
 .DS_Store
 portfolio/settings.py
 .sass-lint.yml
+gulpfile.js
+package.json
+sendgrid.env
+/node_modules
