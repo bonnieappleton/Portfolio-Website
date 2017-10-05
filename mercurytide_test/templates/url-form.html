@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %}
+
+{% load staticfiles %}
+
+{% block page_title %}Page Analyser{% endblock %}
+
+{% block mainpage %}
+<section class="section section--narrow">
+    <div class="row row--title">
+        <h2 class="title title--section">Page Analyser</h2>
+    </div>
+    <div class="row">
+        <div class="text">
+            <p>
+                Enter a url to analyse its content
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <form class="contact-form" role="form" action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button class="button button--yellow button--full" type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

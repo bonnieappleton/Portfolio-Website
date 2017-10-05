@@ -1,0 +1,14 @@
+{% extends 'home/base.html' %}
+
+{% load staticfiles %}
+
+{% block page_title %}Analyser Report{% endblock %}
+
+{% block mainpage %}
+<section class="section section--narrow">
+    <div class="row row--title">
+        <h2 class="title title--section">Success!</h2>
+        <a class="button button--mint" href="{% url 'home' %}">Back to homepage</a>
+    </div>
+</section>
+{% endblock %}
