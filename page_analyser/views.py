@@ -8,5 +8,11 @@ class PageAnalyser(FormView):
     template_name = 'url-form.html'
     success_url = 'analyser-report'
     
+    def form_valid(self, form):
+        url = form.cleaned_data['url']
+        PageAnalyserForm.analyse_page(url)
+        return super(PageAnalyser, self).form_valid(form)
+
+
 class AnalyserReport(TemplateView):
     template_name = 'analyser-report.html'
