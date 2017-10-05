@@ -13,5 +13,5 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'mercurytide_test',
+    'page_analyser',
 ]
