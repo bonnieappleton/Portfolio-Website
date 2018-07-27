@@ -11,3 +11,5 @@ gulpfile.js
 package.json
 sendgrid.env
 /node_modules
+.idea
+*.iml
