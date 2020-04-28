@@ -27,15 +27,15 @@
             </a>
             <nav class="header__nav header__nav--desktop">
                 <a class="button button--yellow" href="{% url 'home' %}">About</a>
-                <a class="button button--mint" href="{% url 'blog' %}">Blog</a>
+                <a class="button button--mint" href="https://bonniecodes.wordpress.com/">Blog</a>
                 <a class="button button--red" href="{% url 'contact' %}#skills">Contact</a>
             </nav>
             <nav class="header__nav header__nav--mobile">
                 <a id="menu-button" class="button button--mint" href="#">Menu</a>
                 <div id="menu" class="header__nav__menu hidden">
-                    <a class="button button--yellow" href="{% url 'home' %}#about">About</a>
-                    <a class="button button--mint" href="{% url 'home' %}#portfolio">Portfolio</a>
-                    <a class="button button--red" href="{% url 'home' %}#skills">Skills</a>
+                    <a class="button button--yellow" href="{% url 'home' %}">About</a>
+                    <a class="button button--mint" href="https://wordpress.com/view/bonniecodes.wordpress.com">Blog</a>
+                    <a class="button button--red" href="{% url 'contact' %}#skills">Contact</a>
                 </div>
             </nav>
         </header>
@@ -44,8 +44,7 @@
         {% block mainpage %}{% endblock %}
         
         <footer class="footer">
-            <p>Copyright Bonnie Appleton 2019</p>
-            <p>Powered by Django</p>
+            <p>Copyright Bonnie Appleton 2020</p>
         </footer>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

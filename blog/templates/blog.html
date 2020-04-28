@@ -25,13 +25,13 @@
             <p>I blog about all things tech, diversity and maker related</p>
         </div>
         <div class="column-container">
-            <div class="text">
-                {% for post in posts %}
+            {% for post in posts %}
+                <div class="text">
                     <h3>{{ post.title }}</h3>
                     <p>published: {{ post.published_date }}</p>
                     <p>{{ post.text|linebreaksbr }}</p>
-                {% endfor %}
-            </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

@@ -7,7 +7,7 @@
 {% block mainpage %}
 
     <section class="section section--top">
-        <h2 class="title title--tagline">Software</br>Developer</h2>
+        <h2 class="title title--tagline">Senior</br>Software</br>Developer</h2>
     </section>
 
     <section id="about" class="section section--border-top">
@@ -20,22 +20,29 @@
         </div>
         <div class="row row--mobile-col">
             <div class="column-container thumbnail-container">
-                <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"></img>
+                <img class="thumbnail thumbnail--avatar" src="{% static 'img/bonnieappleton.jpg' %}" alt="avatar-image"/>
                 <a class="button button--mint button--full" href="{% url 'contact' %}">Contact Me</a>
             </div>
             <div class="column-container">
                 <div class="text">
                     <p>
-                        I am a software developer at
+                        I am a senior software developer at
                         <a class="link" href="https://www.thoughtworks.com/" target="_blank">ThoughtWorks</a>.
-                        I love working on social good projects and I am very active in
-                        communities that aim to improve diversity in the tech industry
-                        such as codebar and Django Girls. I believe that tech can be used
-                        to make the world a better place!
+                        I love working on social good projects and I am passionate about improving diversity in the tech
+                        industry. I believe that tech can be used to make the world a better place!
                     </p>
                     <p>
-                        Outside of work I am a dressmaker, I read a lot of books (currently
-                        on a bit of a graphic novel binge) and I cook a mean bowl of ramen.
+                        I am a versatile developer with a broad range of experience, having started work as a QA before
+                        moving into development. I have worked on front end and back end with a variety of languages,
+                        both object-oriented and functional. At ThoughtWorks I have learnt software development best
+                        practices such as test driven development, continuous integration, pair programming and working
+                        in an autonomous team.
+                    </p>
+                    <p>
+                        Outside of work I like to create - whether it's artwork (which I share on
+                        <a class="link" href="https://www.instagram.com/bonbonrebonart/" target="_blank">Instagram</a>),
+                        making my own clothes, or trying to perfect my ramen recipe.
+                        I am happiest sat by a campfire with a cup of tea and an absorbing novel.
                     </p>
                 </div>
             </div>
@@ -102,50 +109,50 @@
         </div>
         <div class="row row--mobile-col">
             <div class="skills-block">
-                <a class="accordion accordion--yellow active" href="#" data-accordion="accordion-tech">
-                    <h4 class="accordion__title">Technologies</h4>
+                <a class="accordion accordion--yellow active" href="#" data-accordion="accordion-language">
+                    <h4 class="accordion__title">Languages</h4>
                     <div class="accordion__close"></div>
                 </a>
-                <div id="accordion-tech" class="text">
+                <div id="accordion-language" class="text">
                     <ul class="skills-block__list">
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>Django</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
                         <li>Clojure</li>
-                        <li>SQL</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
                     </ul>
                 </div>
             </div>
             <div class="skills-block">
-                <a class="accordion active" href="#" data-accordion="accordion-tools">
-                    <h4 class="accordion__title">Tools</h4>
+                <a class="accordion active" href="#" data-accordion="accordion-frameworks">
+                    <h4 class="accordion__title">Libraries</h4>
                     <div class="accordion__close"></div>
+                </a>
+                <div id="accordion-frameworks" class="text">
+                    <ul class="skills-block__list">
+                        <li>Django</li>
+                        <li>React</li>
+                        <li>Redux</li>
+                        <li>Sass</li>
+                        <li>Vavr</li>
+                        <li>Clara</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills-block">
+                <a class="accordion accordion--red active" href="#" data-accordion="accordion-tools">
+                    <h4 class="accordion__title">Tools</h4>
+                    <div class="accordion__close" href="#"></div>
                 </a>
                 <div id="accordion-tools" class="text">
                     <ul class="skills-block__list">
-                        <li>Selenium Webdriver</li>
-                        <li>Google Analytics</li>
-                        <li>Go CD</li>
                         <li>Git</li>
-                        <li>Heroku</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skills-block">
-                <a class="accordion accordion--red active" href="#" data-accordion="accordion-qualifications">
-                    <h4 class="accordion__title">Qualifications</h4>
-                    <div class="accordion__close" href="#"></div>
-                </a>
-                <div id="accordion-qualifications" class="text">
-                    <ul class="skills-block__list">
-                        <li>ThoughtWorks University, 2018</li>
-                        <li>ISTQB qualified web tester</li>
-                        <li>Masters in Chemistry, Oxford University</li>
-                        <li>Number Theory, Logic and Computability, Open University</li>
-                        <li>Group Theory and Symmetry, Open University</li>
-                        <li>Conversational French</li>
+                        <li>GoCD</li>
+                        <li>RabbitMQ</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Kibana</li>
                     </ul>
                 </div>
             </div>
